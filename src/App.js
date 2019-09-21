@@ -43,6 +43,7 @@ function App() {
   return (
     <React.Fragment>
       <h1>Battle Coffe <FaCoffee /></h1>
+      <h2>const {`{`}<FaHandPaper color='#ffdd67' />, <FaHandRock color='#ffdd67' />, <FaHandScissors color='#ffdd67' />} = Jokenpô;</h2>
       <button onClick={() => fnJokenpo()}>Jokenpo</button>
 
       <FaUserNinja size={30} /> { firstUser !== null && handleJokenpo(firstUser)}
