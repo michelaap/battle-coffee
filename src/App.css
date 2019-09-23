@@ -1,0 +1,58 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    color: #fff;
+    padding: 16px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    /* width: 90px; */
+    margin: 10px;
+}
+
+.btn-tomato {
+    background-color: tomato;
+}
+
+.btn-gray {
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-players {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px; */
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90px;
+    height: 120px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #d7d7d7;
+    margin: 10px;
+}

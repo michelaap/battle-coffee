@@ -8,6 +8,7 @@ import {
   FaUserAstronaut,
   FaUserSecret
 } from 'react-icons/fa';
+import './App.css';
 
 const randomNumber = () => {
   const min = 0;
@@ -17,15 +18,15 @@ const randomNumber = () => {
 
 const handleJokenpo = (value) => {
   if (value === 0) {
-    return <FaHandPaper color='#ffdd67' />
+    return <FaHandPaper color='#ffbc00' />
   }
 
   if (value === 1) {
-    return <FaHandRock color='#ffdd67' />
+    return <FaHandRock color='#ffbc00' />
   }
 
   if (value === 2) {
-    return <FaHandScissors color='#ffdd67' />
+    return <FaHandScissors color='#ffbc00' />
   }
 }
 
@@ -35,20 +36,42 @@ function App() {
   const [thirdUser, setThirdUser] = useState(null);
 
   const fnJokenpo = () => {
-    setFirstUser(() =>  randomNumber());
+    setFirstUser(() => randomNumber());
     setSecondUser(() => randomNumber())
     setThirdUser(() => randomNumber())
   }
 
+  const reset = () => {
+    setFirstUser(null);
+    setSecondUser(null);
+    setThirdUser(null);
+  }
+
   return (
     <React.Fragment>
-      <h1>Battle Coffe <FaCoffee /></h1>
-      <h2>const {`{`}<FaHandPaper color='#ffdd67' />, <FaHandRock color='#ffdd67' />, <FaHandScissors color='#ffdd67' />} = Jokenpô;</h2>
-      <button onClick={() => fnJokenpo()}>Jokenpo</button>
+      <div className='container'>
+        <h1>Battle Coffe <FaCoffee /></h1>
+        <h2>const {`{ `} <FaHandPaper color='#ffbc00' />, <FaHandRock color='#ffbc00' />, <FaHandScissors color='#ffbc00' /> } = Jokenpô;</h2>
+        
+      </div>
+      <div className='container-players'>
+        <div className='player'>
+          <FaUserNinja size={30} /> { firstUser !== null && handleJokenpo(firstUser)}
+        </div>
+        <div className='player'>
+          <FaUserAstronaut size={30} /> { secondUser !== null && handleJokenpo(secondUser) }
+        </div>
+        <div className='player'>
+          <FaUserSecret size={30} /> { thirdUser !== null && handleJokenpo(thirdUser) }
+        </div>
+      </div>
+      <div className='container-btn'>
+        <button className='btn btn-tomato' onClick={() => fnJokenpo()}>Joookeeeenpô</button>
+        <button className='btn btn-gray' onClick={() => reset()}>Reset</button>
+      </div>
 
-      <FaUserNinja size={30} /> { firstUser !== null && handleJokenpo(firstUser)}
-      <FaUserAstronaut size={30} /> { secondUser !== null && handleJokenpo(secondUser) }
-      <FaUserSecret size={30} /> { thirdUser !== null && handleJokenpo(thirdUser) }
+      <p style={{ textAlign: "center", fontSize: 9 }}>Version 0.1.0 &copy; Michel</p>
+
     </React.Fragment>
   );
 }
