@@ -50,7 +50,7 @@ function App() {
   return (
     <React.Fragment>
       <div className='container'>
-        <h1>Battle Coffe <FaCoffee /></h1>
+        <h1>Battle Coffee <FaCoffee /></h1>
         <h2>const {`{ `} <FaHandPaper color='#ffbc00' />, <FaHandRock color='#ffbc00' />, <FaHandScissors color='#ffbc00' /> } = Jokenpô;</h2>
         
       </div>
